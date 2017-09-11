@@ -13,7 +13,7 @@ namespace Shapes.Models.Parser
         [Required]
         public string Message { get; set; }
 
-        public DateTime CreatedTime => DateTime.UtcNow;
+        public DateTime CreatedTime { get; set; }
         public DateTime ModifiedTime { get; set; }
 
     }

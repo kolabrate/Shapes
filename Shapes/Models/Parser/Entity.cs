@@ -11,7 +11,7 @@ namespace Shapes.Models.Parser
         public int EntityId { get; set; }
         [Required]
         public string Name { get; set; }
-        public DateTime CreatedTime => DateTime.Now;
+        public DateTime CreatedTime { get; set;}
         public DateTime ModifiedTime { get; set; }
     }
 }
