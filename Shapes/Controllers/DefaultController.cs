@@ -18,6 +18,7 @@ namespace Shapes.Controllers
     [RoutePrefix("shape")]
     public class DefaultController : ApiController
     {
+        //In a real world scenario - A data layer will be required - which will implement a repo pattern.
         private ShapeDbContext _ctx;
         public DefaultController()
         {
@@ -30,17 +31,11 @@ namespace Shapes.Controllers
         [ValidateExpression]
         public IHttpActionResult HtmlDraw(string userExpression)
         {
-            ParseExpression(userExpression);
             //1)ProcessResponse();
             throw new NotImplementedException();
         }
 
-        private void ParseExpression(string userExpression)
-        {
-            //draw me a circle with a radius of 100 px.
-            // circle - entity
-            // draw - intent
-            // 100 - pixels
-        }
+
+
     }
 }
