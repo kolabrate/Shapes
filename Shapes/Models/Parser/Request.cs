@@ -12,7 +12,6 @@ namespace Shapes.Models.Parser
         public int RequestId { get; set; }
         [Required]
         public string Message { get; set; }
-
         public DateTime CreatedTime { get; set; }
         public DateTime ModifiedTime { get; set; }
 

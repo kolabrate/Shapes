@@ -91,6 +91,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.css" />
+    <Content Include="App\app.html" />
+    <Content Include="App\app.js" />
     <Content Include="App_Data\ShapeDB.mdf" />
     <Content Include="App_Data\ShapeDB_log.ldf">
       <DependentUpon>ShapeDB.mdf</DependentUpon>
@@ -102,6 +105,8 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Dto\ShapeDto.cs" />
+    <Compile Include="Filters\ValidateExpression.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -122,13 +127,7 @@
     <Compile Include="Models\Parser\Intent.cs" />
     <Compile Include="Models\Parser\Request.cs" />
     <Compile Include="Models\Parser\UserExpression.cs" />
-    <Compile Include="Models\Shapes\Circle.cs" />
-    <Compile Include="Models\Shapes\Octagon.cs" />
-    <Compile Include="Models\Shapes\Oval.cs" />
-    <Compile Include="Models\Shapes\Rectangle.cs" />
     <Compile Include="IShape.cs" />
-    <Compile Include="Models\Shapes\Square.cs" />
-    <Compile Include="Models\Shapes\Triangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ShapeDbContext.cs" />
   </ItemGroup>
@@ -141,9 +140,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Filters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709110606258_InitialCreate.resx">
       <DependentUpon>201709110606258_InitialCreate.cs</DependentUpon>
