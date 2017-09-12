@@ -20,16 +20,25 @@ namespace Shapes.Controllers
     {
        
         [Route("draw/{userExpression}")] 
-        [HttpGet]
+        [HttpPost]
         [ResponseType(typeof(ShapeDto))]
-        [ValidateExpression]
         public IHttpActionResult HtmlDraw(string userExpression)
         {
-            //1)ProcessResponse();
-            throw new NotImplementedException();
+            try
+            {
+                var parser = new UserExpressionParser(userExpression);
+                if (!parser.Validate().Any())
+                {
+                    return Ok(parser.Response());
+                }
+                return BadRequest(parser.Validate().ElementAt(0).ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-
-
 
     }
 }
