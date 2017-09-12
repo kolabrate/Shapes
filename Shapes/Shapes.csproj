@@ -99,7 +99,6 @@
       <DependentUpon>ShapeDB.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="App\HtmlPage1.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +129,7 @@
     <Compile Include="IShape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ShapeDbContext.cs" />
+    <Compile Include="UserExpressionParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

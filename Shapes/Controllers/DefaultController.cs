@@ -18,13 +18,7 @@ namespace Shapes.Controllers
     [RoutePrefix("shape")]
     public class DefaultController : ApiController
     {
-        //In a real world scenario - A data layer will be required - which will implement a repo pattern.
-        private ShapeDbContext _ctx;
-        public DefaultController()
-        {
-            _ctx = new ShapeDbContext();
-        }
-
+       
         [Route("draw/{userExpression}")] 
         [HttpGet]
         [ResponseType(typeof(ShapeDto))]
