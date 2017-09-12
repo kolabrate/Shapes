@@ -94,6 +94,7 @@
     <Content Include="App\app.css" />
     <Content Include="App\app.html" />
     <Content Include="App\app.js" />
+    <Content Include="App\libraries\jquery\jquery.min.js" />
     <Content Include="App_Data\ShapeDB.mdf" />
     <Content Include="App_Data\ShapeDB_log.ldf">
       <DependentUpon>ShapeDB.mdf</DependentUpon>

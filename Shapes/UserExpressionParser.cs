@@ -67,19 +67,17 @@ namespace Shapes
                 {
                     case "circle":
                             return ProcessCircle();
-                            break;
-                     default:
+                    default:
                          break;
                 }
             }
             return new ShapeDto() {Code = "Err_500", Html = "", Type = "", ErrorMessage = "Sorry, there is something wrong. Please try again later."};
-           
         }
 
         private ShapeDto ProcessCircle()
         {
             if (Units.Length == 1)
-                return new ShapeDto() {Code = "200", Html = "", Type = "Cirlce", ErrorMessage = ""};
+                return new ShapeDto() {Code = "200", Html = Constants.HTML_CIRCLE, Type = "Cirlce", ErrorMessage = ""};
             return new ShapeDto() { Code = "Err_400", Html = "", Type = "", ErrorMessage = "Circle must contain a single dimension. ex : Draw  me a circle with radius 100px" };
         }
     }

@@ -24,7 +24,7 @@ namespace Shapes
 
 
         #region HTML STRINGS
-        public static string HTML_CIRCLE = "<svg><circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\" /></svg>";
+        public static string HTML_CIRCLE = "<svg style='display: block; margin: auto; width: 400px;height: 400px'><circle cx='150' cy='150' r='100' stroke='green' stroke-width='4' fill='yellow' /></svg>";
 
         #endregion
     }
