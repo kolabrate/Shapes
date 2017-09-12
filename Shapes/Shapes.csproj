@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Dto\ShapeDto.cs" />
     <Compile Include="Filters\ValidateExpression.cs" />

@@ -22,7 +22,7 @@ namespace Shapes
         private IEnumerable<string> AvailableEntities { get; set; }
         public UserExpressionParser(string userExpression)
         {
-            Expression = userExpression;
+            Expression = userExpression.ToLower();
             _ctx = new ShapeDbContext();
             AvailableIntents = _ctx.Intents.ToList().Select(x => x.Synonyms);
             AvailableEntities = _ctx.Entities.ToList().Select(x => x.Name);
@@ -61,11 +61,26 @@ namespace Shapes
         {
             Intent = AvailableIntents.FirstOrDefault(Expression.Contains);
             Entity = AvailableEntities.FirstOrDefault(Expression.Contains);
-            throw new NotImplementedException();
-
+            if (Intent == "draw")
+            {
+                switch (Entity)
+                {
+                    case "circle":
+                            return ProcessCircle();
+                            break;
+                     default:
+                         break;
+                }
+            }
+            return new ShapeDto() {Code = "Err_500", Html = "", Type = "", ErrorMessage = "Sorry, there is something wrong. Please try again later."};
+           
         }
 
-
-
+        private ShapeDto ProcessCircle()
+        {
+            if (Units.Length == 1)
+                return new ShapeDto() {Code = "200", Html = "", Type = "Cirlce", ErrorMessage = ""};
+            return new ShapeDto() { Code = "Err_400", Html = "", Type = "", ErrorMessage = "Circle must contain a single dimension. ex : Draw  me a circle with radius 100px" };
+        }
     }
 }
