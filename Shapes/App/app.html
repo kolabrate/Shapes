@@ -2,17 +2,19 @@
 <html>
 <head>
     <link rel="stylesheet" href="app.css"/>
+    <link href="libraries/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
 <form action="#" method="post">
 	<h1>Draw a Shape!</h1>
-	
+	<div id="container" display: inline-block>
 		 <input type="text" id="txtUserExpression" name="userExpression" placeholder="[Type something like - 'Draw a circle with radius 100' (or) 'Draw me a square with sidelength 50']...">
 		 <input type="button" name="Draw" value="Draw a Shape">
 	
-	<div id="errors"></div>
+		<div id="errors"></div>
+	</div>
 	<div id="canvas" style="margin-top: 200px">
-	    <h2 align="center" id="shapeName"></h2>
+	    	<h2 align="center" id="shapeName"></h2>
 	</div>
 </form>
 <script src="libraries/jquery/jquery.min.js"></script>

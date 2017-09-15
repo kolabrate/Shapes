@@ -95,6 +95,9 @@
     <Content Include="App\app.html" />
     <Content Include="App\app.js" />
     <Content Include="App\libraries\jquery\jquery.min.js" />
+    <Content Include="App\libraries\twitter-bootstrap\css\bootstrap.css" />
+    <Content Include="App\libraries\twitter-bootstrap\js\bootstrap.min.js" />
+    <Content Include="App\TextFile1.txt" />
     <Content Include="App_Data\ShapeDB.mdf" />
     <Content Include="App_Data\ShapeDB_log.ldf">
       <DependentUpon>ShapeDB.mdf</DependentUpon>
